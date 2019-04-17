@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="./ws-demo.js"></script>
+</head>
+<body>
+	<input id="message" placeholder="向后端发送消息">
+	<button onclick="sendMessage()">发送</button>
+	<br/><br/>
+</body>
+<script>
+	function sendMessage () {
+		const message = document.querySelector('#message').value;
+		ws.send(message);
+	}
+</script>
+</html>
